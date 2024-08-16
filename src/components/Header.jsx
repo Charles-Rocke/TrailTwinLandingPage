@@ -130,13 +130,13 @@ export function Header() {
             <Button
               href="/register"
               variant="outline"
-              className="hidden lg:block"
+              className="hidden bg-green-600 text-white lg:block"
             >
               Sign up
             </Button>
-            <Button href="#" className="hidden lg:block">
+            {/* <Button href="#" className="hidden lg:block">
               Download
-            </Button>
+            </Button> */}
           </div>
         </Container>
       </nav>

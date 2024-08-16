@@ -4,33 +4,39 @@ import { Container } from '@/components/Container'
 
 const features = [
   {
-    name: 'Find Rides Anywhere',
+    name: 'Filter and Find Rides',
     description:
-      'Discover rides in your area with just a few taps. Filter by location, difficulty, and ride type to find the perfect match.',
+      "Easily filter through rides by location, difficulty, type, and more to find exactly what you're looking for. Whether it’s a chill ride or something more intense, the perfect match is just a few taps away.",
     icon: DeviceArrowIcon,
   },
   {
-    name: 'Join Exciting Rides',
+    name: 'Group Chats for Rides',
     description:
-      'Become part of the mountain biking community by joining rides organized by fellow enthusiasts. Stay updated with notifications.',
-    icon: DeviceCardsIcon,
-  },
-  {
-    name: 'Create Your Own Rides',
-    description:
-      'Organize your own rides and invite friends or the community. Customize ride details and share easily.',
+      'Stay connected with your crew. A group chat is made for your upcoming ride to coordinate plans, share stoke, and make sure everyone’s on the same page before hitting the trails.',
     icon: DeviceClockIcon,
   },
   {
-    name: 'Tag Your Rides',
+    name: 'Projected Weather',
     description:
-      'Add tags to your rides like "Group Ride" or "Jump Session" to help others find the perfect match for their skills and interests.',
+      'Never get caught off guard by the weather. Get simple projections for your rides so you can plan ahead and make the most of your day on the trail.',
     icon: DeviceListIcon,
   },
   {
-    name: 'Share with Friends',
+    name: 'Skill-Based Ride Matches',
     description:
-      'Share your favorite rides and invite friends to join you on the trail. Build your own riding network effortlessly.',
+      'Looking for rides that match your skill level? No problem. Our app connects you with rides tailored to your expertise, ensuring you’re always challenged and never bored.',
+    icon: DeviceCardsIcon,
+  },
+  {
+    name: 'Find Friends in Your Area',
+    description:
+      'Meet and connect with fellow riders nearby. Whether you’re new to the area or just looking to expand your riding circle, finding friends has never been easier.',
+    icon: DeviceLockIcon,
+  },
+  {
+    name: 'Add Riders You Meet on the Trail',
+    description:
+      'Meet someone new out on the trail? Instantly add them to your friends list so you can stay in touch, share rides, and keep the good times rolling.',
     icon: DeviceLockIcon,
   },
 ]
@@ -190,13 +196,14 @@ export function SecondaryFeatures() {
       <Container>
         <div className="mx-auto max-w-2xl sm:text-center">
           <h2 className="text-3xl font-medium tracking-tight text-gray-900">
-            Now is the Time to Elevate Your Ride
+            Ride Your Way, Every Day
           </h2>
           <p className="mt-2 text-lg text-gray-600">
-            Whether you&apos;re a seasoned biker or just starting out, Trail
-            Twin makes it easy to find, join, and create rides that suit your
-            style. Don’t wait to connect with the community and take your rides
-            to the next level.
+            Whether you’re hitting the trails solo or with friends, Trail Twin
+            connects you with the rides, trails, and people that fit your vibe.
+            Discover hidden gems, meet new friends, and ride with confidence.
+            Join the community that’s all about making every ride, the best
+            ride.
           </p>
         </div>
         <ul

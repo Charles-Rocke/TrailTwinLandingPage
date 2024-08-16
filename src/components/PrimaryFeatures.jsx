@@ -28,21 +28,21 @@ const features = [
   {
     name: 'Find Rides',
     description:
-      'Discover upcoming rides in your area with ease. Filter by location and tags like "Group Ride" or "Jump Session" to find the perfect match.',
+      'Easily discover upcoming rides near you. Filter by things like location, types of rides, and weather to find the perfect ride that matches your vibe.',
     icon: DeviceUserIcon,
     screen: InviteScreen,
   },
   {
-    name: 'Join Rides',
+    name: 'Discover New Trails',
     description:
-      'Join rides organized by fellow mountain biking enthusiasts. Stay updated with notifications and details about the rides you’re interested in.',
+      "Go beyond the well-trodden paths. With our app, you’ll find not only the popular trails but also those hidden gems known only to the local riders. Whether it's a community favorite or a secret spot, explore trails that match your style and skill. Ride where the community rides and uncover new adventures.",
     icon: DeviceNotificationIcon,
     screen: StocksScreen,
   },
   {
-    name: 'Create and Share Rides',
+    name: 'Make new friends',
     description:
-      'Organize your own rides and invite your friends to join. Customize your ride details, share with friends, and build your own riding community.',
+      'Riding’s more fun and safe with friends. With our app, you can easily connect with riders who share your style and skill level. Whether you’re looking for a regular crew or just someone to hit the trails with today, finding your perfect riding buddies is just a few taps away.',
     icon: DeviceTouchIcon,
     screen: InvestScreen,
   },
@@ -427,7 +427,7 @@ function FeaturesDesktop() {
       </TabList>
       <div className="relative col-span-6">
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-          <CircleBackground color="#13B5C8" className="animate-spin-slower" />
+          <CircleBackground color="#22c55e" className="animate-spin-slower" />
         </div>
         <PhoneFrame className="z-10 mx-auto w-full max-w-[366px]">
           <TabPanels as={Fragment}>
@@ -559,13 +559,13 @@ export function PrimaryFeatures() {
       <Container>
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">
           <h2 className="text-3xl font-medium tracking-tight text-white">
-            All the Features You Need for the Perfect Ride
+            Everything You Need for Your Best Ride
           </h2>
           <p className="mt-2 text-lg text-gray-400">
-            Trail Twin is designed for riders who want to make the most of their
-            time. Find, join, and create rides with others easily. Experience
-            the freedom to ride your way. Ride your way, on your schedule, and
-            connect with the biking community like never before.
+            Trail Twin is built for riders who want to get the most out of every
+            ride. Find rides, trails, and friends that match your style easily.
+            Ride on your terms, meet other fellow riders, and make the most out
+            of every trail.
           </p>
         </div>
       </Container>

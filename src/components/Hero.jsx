@@ -46,8 +46,8 @@ function BackgroundIllustration(props) {
             y2="1025"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#06b6d4" />
-            <stop offset="1" stopColor="#06b6d4" stopOpacity="0" />
+            <stop stopColor="#22c55e" />
+            <stop offset="1" stopColor="#22c55e" stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>
@@ -76,8 +76,8 @@ function BackgroundIllustration(props) {
             y2="913"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#06b6d4" />
-            <stop offset="1" stopColor="#06b6d4" stopOpacity="0" />
+            <stop stopColor="#22c55e" />
+            <stop offset="1" stopColor="#22c55e" stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>
@@ -105,17 +105,17 @@ export function Hero() {
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
             <h1 className="text-4xl font-medium tracking-tight text-gray-900">
-              Mountain Biking Made Easy
+              Find Your Perfect Ride
             </h1>
             <p className="mt-6 text-lg text-gray-600">
-              Forget about organizing. With our MTB app, you can ride whenever
-              it suits you. Find a partner anytime, and effortlessly find, join,
-              and create rides with others. Sign up now to join the waitlist and
-              be the first to experience the ultimate in mountain biking
-              convenience.
+              With our app, you&apos;ll find trails, rides, and friends that
+              match your skill level and style. Whether you&apos;re chasing the
+              perfect conditions or looking for riders just like you, we&apos;ve
+              got you covered. Sign up now to be among the first to find your
+              perfect rides.
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
-              <AppStoreLink />
+              {/* <AppStoreLink /> */}
               <Button
                 href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
                 variant="outline"
@@ -133,7 +133,7 @@ export function Hero() {
               </PhoneFrame>
             </div>
           </div>
-          <div className="relative -mt-4 lg:col-span-7 lg:mt-0 xl:col-span-6">
+          {/* <div className="relative -mt-4 lg:col-span-7 lg:mt-0 xl:col-span-6">
             <p className="text-center text-sm font-semibold text-gray-900 lg:text-left">
               As featured in
             </p>
@@ -156,7 +156,7 @@ export function Hero() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
       </Container>
     </div>

@@ -20,7 +20,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={clsx('bg-stone-50 antialiased', inter.variable)}>
+    <html
+      lang="en"
+      className={clsx('bg-[#FDFDF5] antialiased', inter.variable)}
+    >
       <body>{children}</body>
     </html>
   )

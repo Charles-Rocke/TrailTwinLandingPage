@@ -21,7 +21,9 @@ export default function Register() {
       //     to your account.
       //   </>
       // }
-      subtitle={<>Sign up to learn more about rides near you.</>}
+      subtitle={
+        <>Sign up to secure your spot on the waitlist and we’ll be in touch!</>
+      }
     >
       <form>
         <div className="grid grid-cols-2 gap-6">
@@ -68,7 +70,7 @@ export default function Register() {
           </SelectField>
         </div>
         <Button type="submit" color="cyan" className="mt-8 w-full">
-          Learn more today
+          Submit
         </Button>
       </form>
     </AuthLayout>
