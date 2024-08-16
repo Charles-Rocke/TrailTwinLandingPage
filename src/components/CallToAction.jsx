@@ -1,6 +1,8 @@
 import { AppStoreLink } from '@/components/AppStoreLink'
 import { CircleBackground } from '@/components/CircleBackground'
 import { Container } from '@/components/Container'
+import { Button } from './Button'
+import { PlayIcon } from './Hero'
 
 export function CallToAction() {
   return (
@@ -23,7 +25,11 @@ export function CallToAction() {
             spot now!
           </p>
           <div className="mt-8 flex justify-center">
-            <AppStoreLink color="white" />
+            {/* <AppStoreLink color="white" /> */}
+            <Button href="/register" variant="solid" color="green">
+              {/* <PlayIcon className="h-6 w-6 flex-none" /> */}
+              <span>Get Early Access</span>
+            </Button>
           </div>
         </div>
       </Container>

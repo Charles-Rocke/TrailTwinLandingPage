@@ -1,6 +1,5 @@
+'use client'
 import { useId } from 'react'
-import Image from 'next/image'
-import clsx from 'clsx'
 
 import { AppDemo } from '@/components/AppDemo'
 import { AppStoreLink } from '@/components/AppStoreLink'
@@ -85,7 +84,7 @@ function BackgroundIllustration(props) {
   )
 }
 
-function PlayIcon(props) {
+export function PlayIcon(props) {
   return (
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
       <circle cx="12" cy="12" r="11.5" stroke="#D4D4D4" />
@@ -115,9 +114,14 @@ export function Hero() {
               perfect rides.
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
-              {/* <AppStoreLink /> */}
+              <Button href="/register" variant="solid" color="green">
+                {/* <PlayIcon className="h-6 w-6 flex-none" /> */}
+                <span>Get updates</span>
+              </Button>
               <Button
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                href="https://youtube.com/shorts/fx1pjbexCZE?feature=share"
+                target="_blank"
+                rel="noopener noreferrer"
                 variant="outline"
               >
                 <PlayIcon className="h-6 w-6 flex-none" />

@@ -127,12 +127,8 @@ export function Header() {
                 </>
               )}
             </Popover>
-            <Button
-              href="/register"
-              variant="outline"
-              className="hidden bg-green-600 text-white lg:block"
-            >
-              Sign up
+            <Button href="/register" variant="solid" color="green">
+              Get Early Access
             </Button>
             {/* <Button href="#" className="hidden lg:block">
               Download

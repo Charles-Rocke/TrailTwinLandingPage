@@ -69,7 +69,7 @@ export default function Register() {
             <option>Other</option>
           </SelectField>
         </div>
-        <Button type="submit" color="cyan" className="mt-8 w-full">
+        <Button type="submit" color="green" className="mt-8 w-full">
           Submit
         </Button>
       </form>
