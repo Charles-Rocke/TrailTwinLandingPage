@@ -112,13 +112,17 @@ export function Header() {
                             <MobileNavLink href="/#pricing">
                               Pricing
                             </MobileNavLink> */}
-                            <MobileNavLink href="/#faqs">FAQs</MobileNavLink>
+                            {/* <MobileNavLink href="/#faqs">FAQs</MobileNavLink> */}
                           </div>
                           <div className="mt-8 flex flex-col gap-4">
-                            <Button href="/register" variant="outline">
-                              Sign up
+                            <Button
+                              href="/register"
+                              variant="solid"
+                              color="green"
+                            >
+                              Get updates
                             </Button>
-                            <Button href="#">Download the app</Button>
+                            {/* <Button href="#">Download the app</Button> */}
                           </div>
                         </PopoverPanel>
                       </>
