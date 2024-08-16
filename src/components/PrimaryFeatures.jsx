@@ -1,5 +1,11 @@
 'use client'
 
+import Image from 'next/image'
+import MapScreenImg from '@/images/screens/map.png'
+import FriendsScreenImg from '@/images/screens/friends.png'
+import TrailsScreenImg from '@/images/screens/trails.png'
+import RidesScreenImg from '@/images/screens/rides.png'
+
 import { Fragment, useEffect, useId, useRef, useState } from 'react'
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 import clsx from 'clsx'
@@ -29,26 +35,26 @@ const features = [
     name: 'Find Rides',
     description:
       'Easily discover upcoming rides near you. Filter by things like location, types of rides, and weather to find the perfect ride that matches your vibe.',
-    icon: DeviceSearchIcon,
-    screen: InviteScreen,
+    icon: SearchIcon,
+    screen: EventsScreen,
   },
   {
     name: 'Discover New Trails',
     description:
       "Go beyond the well-trodden paths. With our app, you’ll find not only the popular trails but also those hidden gems known only to the local riders. Whether it's a community favorite or a secret spot, explore trails that match your style and skill. Ride where the community rides and uncover new adventures.",
-    icon: DeviceMapIcon,
-    screen: StocksScreen,
+    icon: MapIcon,
+    screen: MapScreen,
   },
   {
     name: 'Make new friends',
     description:
       'Riding’s more fun and safe with friends. With our app, you can easily connect with riders who share your style and skill level. Whether you’re looking for a regular crew or just someone to hit the trails with today, finding your perfect riding buddies is just a few taps away.',
-    icon: DeviceSwipeIcon,
-    screen: InvestScreen,
+    icon: SwipeIcon,
+    screen: FriendsScreen,
   },
 ]
 
-function DeviceSearchIcon(props) {
+function SearchIcon(props) {
   return (
     <svg viewBox="0 0 32 32" aria-hidden="true" {...props}>
       <circle cx={16} cy={16} r={16} fill="#A3A3A3" fillOpacity={0.2} />
@@ -77,7 +83,7 @@ function DeviceSearchIcon(props) {
   )
 }
 
-function DeviceMapIcon(props) {
+function MapIcon(props) {
   return (
     <svg viewBox="0 0 32 32" aria-hidden="true" {...props}>
       <circle cx={16} cy={16} r={16} fill="#A3A3A3" fillOpacity={0.2} />
@@ -107,7 +113,7 @@ function DeviceMapIcon(props) {
   )
 }
 
-function DeviceSwipeIcon(props) {
+function SwipeIcon(props) {
   let id = useId()
 
   return (
@@ -121,8 +127,8 @@ function DeviceSwipeIcon(props) {
           y2={17}
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#D4D4D4" />
-          <stop offset={1} stopColor="#D4D4D4" stopOpacity={0} />
+          <stop stopColor="#f3f4f6" />
+          <stop offset={1} stopColor="#f3f4f6" stopOpacity={0} />
         </linearGradient>
       </defs>
       <circle cx={16} cy={16} r={16} fill="#A3A3A3" fillOpacity={0.2} />
@@ -130,7 +136,7 @@ function DeviceSwipeIcon(props) {
         fillRule="evenodd"
         clipRule="evenodd"
         d="M5 4a4 4 0 014-4h14a4 4 0 014 4v13h-2V4a2 2 0 00-2-2h-1.382a1 1 0 00-.894.553l-.448.894a1 1 0 01-.894.553h-6.764a1 1 0 01-.894-.553l-.448-.894A1 1 0 0010.382 2H9a2 2 0 00-2 2v24a2 2 0 002 2h4v2H9a4 4 0 01-4-4V4z"
-        fill="#D4D4D4"
+        fill="#f3f4f6"
       />
       <path
         d="M7 22c0-4.694 3.5-8 8-8"
@@ -141,7 +147,7 @@ function DeviceSwipeIcon(props) {
       />
       <path
         d="M21 20l.217-5.513a1.431 1.431 0 00-2.85-.226L17.5 21.5l-1.51-1.51a2.107 2.107 0 00-2.98 0 .024.024 0 00-.005.024l3.083 9.25A4 4 0 0019.883 32H25a4 4 0 004-4v-5a3 3 0 00-3-3h-5z"
-        fill="#D4D4D4"
+        fill="#f3f4f6"
       />
     </svg>
   )
@@ -193,194 +199,70 @@ const bodyAnimation = {
   },
 }
 
-function InviteScreen(props) {
+function EventsScreen(props) {
   return (
     <AppScreen className="w-full">
       <MotionAppScreenHeader {...(props.animated ? headerAnimation : {})}>
-        <AppScreen.Title>Invite people</AppScreen.Title>
+        <AppScreen.Title>Find Rides</AppScreen.Title>
         <AppScreen.Subtitle>
-          Get tips <span className="text-white">5s sooner</span> for every
-          invite.
+          Find rides quickly by location and filters.
         </AppScreen.Subtitle>
       </MotionAppScreenHeader>
       <MotionAppScreenBody
         {...(props.animated ? { ...bodyAnimation, custom: props.custom } : {})}
       >
-        <div className="px-4 py-6">
-          <div className="space-y-6">
-            {[
-              { label: 'Full name', value: 'Albert H. Wiggin' },
-              { label: 'Email address', value: 'awiggin@chase.com' },
-            ].map((field) => (
-              <div key={field.label}>
-                <div className="text-sm text-gray-500">{field.label}</div>
-                <div className="mt-2 border-b border-gray-200 pb-2 text-sm text-gray-900">
-                  {field.value}
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="mt-6 rounded-lg bg-cyan-500 px-3 py-2 text-center text-sm font-semibold text-white">
-            Invite person
-          </div>
-        </div>
+        <Image
+          src={RidesScreenImg}
+          alt="Map of Events"
+          width={500} // specify the width of the image
+          height={300} // specify the height of the image
+          layout="responsive" // allows the image to be responsive
+          className="h-full w-full object-cover"
+        />
       </MotionAppScreenBody>
     </AppScreen>
   )
 }
 
-function StocksScreen(props) {
+function MapScreen(props) {
   return (
     <AppScreen className="w-full">
       <MotionAppScreenHeader {...(props.animated ? headerAnimation : {})}>
-        <AppScreen.Title>Stocks</AppScreen.Title>
-        <AppScreen.Subtitle>March 9, 2022</AppScreen.Subtitle>
+        <AppScreen.Title>View Trails</AppScreen.Title>
       </MotionAppScreenHeader>
       <MotionAppScreenBody
         {...(props.animated ? { ...bodyAnimation, custom: props.custom } : {})}
       >
-        <div className="divide-y divide-gray-100">
-          {[
-            {
-              name: 'Laravel',
-              price: '4,098.01',
-              change: '+4.98%',
-              color: '#F9322C',
-              logo: LaravelLogo,
-            },
-            {
-              name: 'Tuple',
-              price: '5,451.10',
-              change: '-3.38%',
-              color: '#5A67D8',
-              logo: TupleLogo,
-            },
-            {
-              name: 'Transistor',
-              price: '4,098.41',
-              change: '+6.25%',
-              color: '#2A5B94',
-              logo: TransistorLogo,
-            },
-            {
-              name: 'Diageo',
-              price: '250.65',
-              change: '+1.25%',
-              color: '#3320A7',
-              logo: DiageoLogo,
-            },
-            {
-              name: 'StaticKit',
-              price: '250.65',
-              change: '-3.38%',
-              color: '#2A3034',
-              logo: StaticKitLogo,
-            },
-            {
-              name: 'Statamic',
-              price: '5,040.85',
-              change: '-3.11%',
-              color: '#0EA5E9',
-              logo: StatamicLogo,
-            },
-            {
-              name: 'Mirage',
-              price: '140.44',
-              change: '+9.09%',
-              color: '#16A34A',
-              logo: MirageLogo,
-            },
-            {
-              name: 'Reversable',
-              price: '550.60',
-              change: '-1.25%',
-              color: '#8D8D8D',
-              logo: ReversableLogo,
-            },
-          ].map((stock) => (
-            <div key={stock.name} className="flex items-center gap-4 px-4 py-3">
-              <div
-                className="flex-none rounded-full"
-                style={{ backgroundColor: stock.color }}
-              >
-                <stock.logo className="h-10 w-10" />
-              </div>
-              <div className="flex-auto text-sm text-gray-900">
-                {stock.name}
-              </div>
-              <div className="flex-none text-right">
-                <div className="text-sm font-medium text-gray-900">
-                  {stock.price}
-                </div>
-                <div
-                  className={clsx(
-                    'text-xs leading-5',
-                    stock.change.startsWith('+')
-                      ? 'text-cyan-500'
-                      : 'text-gray-500',
-                  )}
-                >
-                  {stock.change}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+        <Image
+          src={TrailsScreenImg}
+          alt="Map of Events"
+          width={500} // specify the width of the image
+          height={300} // specify the height of the image
+          layout="responsive" // allows the image to be responsive
+          className="h-full w-full object-cover"
+        />
       </MotionAppScreenBody>
     </AppScreen>
   )
 }
 
-function InvestScreen(props) {
+function FriendsScreen(props) {
   return (
     <AppScreen className="w-full">
       <MotionAppScreenHeader {...(props.animated ? headerAnimation : {})}>
-        <AppScreen.Title>Buy $LA</AppScreen.Title>
-        <AppScreen.Subtitle>
-          <span className="text-white">$34.28</span> per share
-        </AppScreen.Subtitle>
+        <AppScreen.Title>Meet riding buddies</AppScreen.Title>
       </MotionAppScreenHeader>
       <MotionAppScreenBody
         {...(props.animated ? { ...bodyAnimation, custom: props.custom } : {})}
       >
-        <div className="px-4 py-6">
-          <div className="space-y-4">
-            {[
-              { label: 'Number of shares', value: '100' },
-              {
-                label: 'Current market price',
-                value: (
-                  <div className="flex">
-                    $34.28
-                    <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6">
-                      <path
-                        d="M17 15V7H9M17 7 7 17"
-                        stroke="#06B6D4"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </div>
-                ),
-              },
-              { label: 'Estimated cost', value: '$3,428.00' },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className="flex justify-between border-b border-gray-100 pb-4"
-              >
-                <div className="text-sm text-gray-500">{item.label}</div>
-                <div className="text-sm font-semibold text-gray-900">
-                  {item.value}
-                </div>
-              </div>
-            ))}
-            <div className="rounded-lg bg-cyan-500 px-3 py-2 text-center text-sm font-semibold text-white">
-              Buy shares
-            </div>
-          </div>
-        </div>
+        <Image
+          src={FriendsScreenImg}
+          alt="Map of Events"
+          width={500} // specify the width of the image
+          height={300} // specify the height of the image
+          layout="responsive" // allows the image to be responsive
+          className="h-full w-full object-cover"
+        />
       </MotionAppScreenBody>
     </AppScreen>
   )
