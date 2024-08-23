@@ -23,7 +23,7 @@ export default function Register() {
       //   </>
       // }
       subtitle={
-        <>Sign up to secure your spot on the waitlist and we’ll be in touch!</>
+        <>Sign up to save your spot on the waitlist and we’ll be in touch!</>
       }
     >
       <WaitlistForm />
