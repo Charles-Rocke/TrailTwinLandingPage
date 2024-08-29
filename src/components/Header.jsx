@@ -120,7 +120,7 @@ export function Header() {
                               variant="solid"
                               color="green"
                             >
-                              Get updates
+                              Get Early Access
                             </Button>
                             {/* <Button href="#">Download the app</Button> */}
                           </div>
@@ -131,7 +131,12 @@ export function Header() {
                 </>
               )}
             </Popover>
-            <Button href="/register" variant="solid" color="green">
+            <Button
+              href="/register"
+              variant="solid"
+              color="green"
+              className="hidden lg:block"
+            >
               Get Early Access
             </Button>
             {/* <Button href="#" className="hidden lg:block">
