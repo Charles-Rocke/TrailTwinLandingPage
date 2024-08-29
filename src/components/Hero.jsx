@@ -116,7 +116,7 @@ export function Hero() {
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
               <Button href="/register" variant="solid" color="green">
                 {/* <PlayIcon className="h-6 w-6 flex-none" /> */}
-                <span>Get updates</span>
+                <span>Get Early Access</span>
               </Button>
               <Button
                 href="https://youtube.com/shorts/fx1pjbexCZE?feature=share"
