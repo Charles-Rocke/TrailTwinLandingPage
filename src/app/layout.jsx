@@ -12,10 +12,10 @@ const inter = Inter({
 export const metadata = {
   title: {
     template: '%s - Trail Twin',
-    default: 'Trail Twin - Find mtb rides, trails, and friends near you.',
+    default: 'Trail Twin - Find mtb rides, friends, and trails near you.',
   },
   description:
-    "With our app, you'll find trails, rides, and friends that match your skill level and style.",
+    "With our app, you'll find local trails, rides, and friends that match your skill level and style.",
 }
 
 export default function RootLayout({ children }) {
