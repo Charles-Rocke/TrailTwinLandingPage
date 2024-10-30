@@ -25,8 +25,6 @@ export default function Support() {
                       <a
                         href="mailto:foundingtwins@gmail.com"
                         className="font-semibold text-green-600"
-                        target="_blank"
-                        rel="noopener noreferrer"
                       >
                         foundingtwins@gmail.com
                       </a>
