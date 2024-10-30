@@ -96,7 +96,7 @@ export function WaitlistForm() {
         className="mt-8 w-full"
         disabled={state.submitting}
       >
-        Submit
+        Sign up
       </Button>
     </form>
   )
